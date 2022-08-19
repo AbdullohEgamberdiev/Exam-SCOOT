@@ -1,0 +1,79 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+// font-family: 'Space Mono', monospace;
+  // font-family: 'Lexend Deca', sans-serif;
+
+body{
+  background: #F2F2F2;
+}
+
+a,ul,li{
+  text-decoration: none;
+  list-style: none;
+}
+
+.container{
+  max-width: 1185px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+@mixin section {
+  border: 1px solid white;
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@mixin title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  font-family: 'Space Mono', monospace;
+}
+
+@mixin title2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+  font-family: 'Space Mono', monospace;
+}
+
+@mixin title3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: #495567;
+  font-family: 'Space Mono', monospace;
+}
+
+@mixin text {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@mixin btn {
+  border: 3px solid rgba(252, 183, 43, 1);
+  background-color: rgba(252, 183, 43, 1);
+  width: 180px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+  color: white;
+  transition: all .4s ease-out;
+  &:hover{
+    background: none;
+    color: rgba(252, 183, 43, 1);
+  }
+}

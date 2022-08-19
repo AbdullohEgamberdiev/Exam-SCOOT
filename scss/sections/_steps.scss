@@ -1,0 +1,94 @@
+.steps{
+  @include section;
+  background-color: white;
+  background-image: url(../img/step-line.png);
+  background-repeat: no-repeat;
+  background-position-y: 190px;
+  &::before{
+    content: url(../img/step-line3.svg);
+    display: none;
+    position: absolute;
+    height: 400px;
+    left: 70px;
+    z-index: 0;
+  }
+}
+
+.steps__box{
+  padding: 150px 0px;
+}
+
+.steps__list{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.steps__item {
+  flex: 1;
+}
+
+.steps__item__child {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.steps__title {
+  @include title2;
+}
+
+.steps__text{
+  @include text;
+  font-weight: 400;
+  color: #939CAA;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media screen and (max-width: 1350px) {
+  .steps{
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+
+  .steps::before{
+    display: block !important;
+
+  }
+  .steps__list{
+    flex-direction: column;
+  }
+
+  .steps__item{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    z-index: 1;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .steps__list{
+    gap: 110px;
+  }
+  .steps__item{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .steps__title{
+    text-align: center;
+  }
+
+  .steps__text{
+    text-align: center;
+  }
+
+  .steps::before{
+    display: none !important;
+  }
+}

@@ -1,0 +1,54 @@
+.sign__up{
+  @include section;
+  background: #495567;
+  background-image: url(../img/Group22.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.sign-up__box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+.sign-up__title{
+  @include title3;
+  color: white;
+}
+
+.sign-up__child1{
+  display: flex;
+  gap: 20px;
+}
+
+.sign-up__link{
+  &:hover{
+    transition: all .4s ease-out;
+    box-shadow: rgba(0,0,0.7) 0px 5px 5px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .sign-up__title{
+    text-align: center;
+  }
+  .sign-up__box{
+    flex-direction: column !important;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sign-up__child1{
+    flex-direction: column;
+  }
+
+  .sign-up__link{
+    align-self: center;
+  }
+}
